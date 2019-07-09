@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'invoicing-slt';
+  chatuska = 'Hi .....';
+  isClick = false;
+  student = {name: 'How are you?'};
+  job = 'sjskfs';
+  test() {
+    this.isClick = true;
+  }
 }
