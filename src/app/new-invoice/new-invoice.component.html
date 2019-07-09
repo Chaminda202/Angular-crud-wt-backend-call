@@ -1,0 +1,24 @@
+<div class="col-md-6 action-container">
+  <h2 style="margin: auto"> Module Details</h2>
+  <button class="btn btn-danger"  style="width:150px"(click)="onSave()"> Add Module</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Code</th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let action of moduleList">
+      <td>{{action.id}}</td>
+      <td>{{action.name}}</td>
+      <td>{{action.code}}</td>
+      <td><button class="btn btn-success" (click)="onDelete(action.id, action)"> Delete</button>
+      <button class="btn btn-success" style="margin-left: 20px;" (click)="onEdit(action.id)"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
