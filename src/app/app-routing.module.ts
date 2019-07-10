@@ -6,10 +6,11 @@ import {UpdateActionComponent} from './update-action/update-action.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {RegisterUserComponent} from './register-user/register-user.component';
 import {LoginComponent} from './login/login.component';
+import {AuthGuard} from './guards/AuthGuard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'action', pathMatch: 'full'},
-  { path: 'action', component: NewInvoiceComponent},
+  { path: 'action', component: NewInvoiceComponent, canActivate: [AuthGuard]},
   { path: 'create', component: CreateActionComponent },
   { path: 'edit/:id', component: UpdateActionComponent },
   { path: 'register', component: RegisterUserComponent },
